@@ -1,0 +1,112 @@
+/* scratch.css — My Dog Obsession by Marisa Boyce */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Jost', 'Helvetica Neue', sans-serif;
+  background-color: #0d0d0d;
+  color: #f0e6ef;
+  overflow-x: hidden;
+}
+
+.gem { position: fixed; font-size: 1.1rem; pointer-events: none; z-index: 0; animation: gemTwinkle 4s ease-in-out infinite; opacity: 0.35; }
+.g1 { top: 5%; left: 3%; animation-delay: 0s; }
+.g2 { top: 12%; right: 4%; animation-delay: 1s; font-size: 1.5rem; }
+.g3 { top: 40%; left: 1%; animation-delay: 2s; }
+.g4 { top: 55%; right: 2%; animation-delay: 0.5s; font-size: 0.9rem; }
+.g5 { top: 80%; left: 5%; animation-delay: 1.5s; font-size: 1.3rem; }
+.g6 { top: 90%; right: 6%; animation-delay: 2.5s; }
+@keyframes gemTwinkle {
+  0%, 100% { opacity: 0.2; transform: scale(1) rotate(0deg); }
+  50% { opacity: 0.65; transform: scale(1.4) rotate(25deg); }
+}
+
+.chrome-bar { height: 3px; background: linear-gradient(90deg, transparent 0%, #888 15%, #e8e8e8 30%, #ffffff 50%, #e8e8e8 70%, #888 85%, transparent 100%); width: 100%; }
+
+.hero { position: relative; z-index: 1; text-align: center; padding: 0; background: radial-gradient(ellipse at center, rgba(236,72,153,0.18) 0%, #0d0d0d 70%); }
+.hero-content { padding: 4rem 2rem 3rem; }
+.paw-scatter { font-size: 1.6rem; letter-spacing: 1rem; margin-bottom: 1.2rem; opacity: 0.6; }
+
+h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  font-weight: 600;
+  line-height: 1;
+  background: linear-gradient(135deg, #e8e8e8 0%, #a0a0a0 25%, #ffffff 50%, #c0c0c0 75%, #e8e8e8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 2px;
+}
+.italic-word { font-style: italic; background: linear-gradient(135deg, #f472b6, #fce7f3, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.tagline { font-size: 0.8rem; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-top: 1rem; }
+.gem-row { margin-top: 1.5rem; font-size: 1rem; letter-spacing: 0.5rem; opacity: 0.5; }
+
+.sticky-nav { position: sticky; top: 0; z-index: 100; background: rgba(13,13,13,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(244,114,182,0.25); padding: 0.9rem 2rem; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.5rem 1rem; }
+.sticky-nav a { font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+.sticky-nav a:hover { color: #f472b6; }
+.sticky-nav .nav-app { color: #f472b6; border: 1px solid rgba(244,114,182,0.4); padding: 0.3rem 0.8rem; border-radius: 50px; }
+.dot { color: rgba(192,192,192,0.3); font-size: 0.5rem; }
+
+.section { position: relative; z-index: 1; padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
+.section-dark { background: rgba(255,255,255,0.02); max-width: 100%; border-top: 1px solid rgba(255,255,255,0.04); border-bottom: 1px solid rgba(255,255,255,0.04); }
+
+.intro-div { max-width: 680px; margin: 0 auto; text-align: center; padding: 3rem 2rem; }
+.intro-text { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-style: italic; color: rgba(255,255,255,0.7); line-height: 1.9; }
+
+.breed-div { display: grid; gap: 3rem; align-items: center; }
+.breed-left { grid-template-columns: 1fr 1fr; }
+.breed-right { grid-template-columns: 1fr 1fr; }
+@media (max-width: 700px) { .breed-left, .breed-right { grid-template-columns: 1fr; } }
+
+.breed-image-div { position: relative; }
+.breed-img { width: 100%; height: 420px; object-fit: cover; border-radius: 20px; border: 1px solid rgba(244,114,182,0.25); display: block; transition: transform 0.3s; }
+.breed-img:hover { transform: scale(1.01); }
+.img-caption { position: absolute; bottom: 14px; left: 14px; background: rgba(13,13,13,0.8); border: 1px solid rgba(244,114,182,0.3); color: #f472b6; font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 50px; }
+
+.breed-text-div { display: flex; flex-direction: column; gap: 1.2rem; }
+.breed-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; color: #fff; line-height: 1.1; }
+.pink { color: #f472b6; }
+.breed-desc { font-size: 1rem; color: rgba(255,255,255,0.65); line-height: 1.85; }
+.sub-heading { font-family: 'Cormorant Garamond', serif; font-size: 1rem; letter-spacing: 3px; text-transform: uppercase; color: rgba(192,192,192,0.7); margin-top: 0.5rem; }
+.chrome-line { height: 1px; background: linear-gradient(90deg, transparent, rgba(192,192,192,0.4), transparent); border: none; margin: 1rem 0; }
+
+.styled-ol { list-style: none; counter-reset: steps; display: flex; flex-direction: column; gap: 0.8rem; }
+.styled-ol > li { counter-increment: steps; display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.92rem; color: rgba(255,255,255,0.75); }
+.styled-ol > li::before { content: counter(steps); display: inline-flex; width: 22px; height: 22px; background: linear-gradient(135deg, #ec4899, #be185d); border-radius: 50%; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; color: white; flex-shrink: 0; margin-bottom: 2px; }
+.styled-ul { list-style: none; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.3rem; }
+.styled-ul li { font-size: 0.85rem; color: rgba(255,255,255,0.55); display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.5; }
+.styled-ul li::before { content: '🐾'; font-size: 0.6rem; margin-top: 3px; flex-shrink: 0; }
+
+.gallery-div { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem; }
+.gallery-img { width: 100%; height: 260px; object-fit: cover; border-radius: 14px; border: 1px solid rgba(244,114,182,0.15); transition: transform 0.3s; display: block; }
+.gallery-img:hover { transform: scale(1.03); border-color: rgba(244,114,182,0.5); }
+
+.anchor-section { text-align: center; padding: 4rem 2rem; position: relative; z-index: 1; }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); color: #fff; margin-bottom: 0.5rem; }
+.section-subtitle { font-size: 0.78rem; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 2.5rem; }
+
+.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 900px; margin: 0 auto; }
+@media (max-width: 650px) { .why-grid { grid-template-columns: 1fr; } }
+.why-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(244,114,182,0.2); border-radius: 18px; padding: 2rem 1.2rem; text-align: center; transition: transform 0.25s; }
+.why-card:hover { transform: translateY(-4px); border-color: rgba(244,114,182,0.5); }
+.why-icon { font-size: 2.5rem; display: block; margin-bottom: 0.8rem; }
+.why-label { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: #f472b6; margin-bottom: 0.5rem; }
+.why-text { font-size: 0.83rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
+
+.video-div { max-width: 700px; margin: 2rem auto 0; }
+.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px; border: 1px solid rgba(244,114,182,0.25); }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 16px; }
+.video-caption { text-align: center; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-top: 0.8rem; }
+
+.tableau-div { max-width: 900px; margin: 2rem auto 0; border-radius: 16px; overflow: hidden; border: 1px solid rgba(244,114,182,0.2); }
+
+.app-banner { position: relative; z-index: 1; background: linear-gradient(135deg, rgba(236,72,153,0.15), rgba(190,24,93,0.1)); border-top: 1px solid rgba(244,114,182,0.3); border-bottom: 1px solid rgba(244,114,182,0.3); padding: 3rem 2rem; text-align: center; margin: 2rem 0; }
+.app-banner h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: #fff; margin-bottom: 0.5rem; }
+.app-banner p { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 1.5rem; }
+.pink-btn { display: inline-block; background: linear-gradient(135deg, #ec4899, #be185d); color: white; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; padding: 0.8rem 2.2rem; border-radius: 50px; text-decoration: none; transition: all 0.3s; box-shadow: 0 4px 20px rgba(236,72,153,0.35); }
+.pink-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(236,72,153,0.55); }
+
+.back-top { text-align: center; padding: 2.5rem; position: relative; z-index: 1; }
+.back-top a { font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
+.back-top a:hover { color: #f472b6; }
+.footer-gems { font-size: 0.9rem; letter-spacing: 0.5rem; opacity: 0.3; margin-top: 0.5rem; }
